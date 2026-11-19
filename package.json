@@ -1,0 +1,28 @@
+{
+  "name": "opencode-cline",
+  "version": "0.1.0",
+  "description": "Cline / ClinePass provider plugin for OpenCode V2 (WorkOS device-code OAuth, model catalogs, prompt-cache normalization).",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "bun test"
+  },
+  "keywords": [
+    "opencode-plugin",
+    "cline",
+    "cline-pass",
+    "oauth"
+  ],
+  "dependencies": {
+    "@opencode/plugin": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
