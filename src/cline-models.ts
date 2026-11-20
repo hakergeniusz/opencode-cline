@@ -1,5 +1,5 @@
 // Model catalog loading for the two Cline providers.
-// Ported from pi-cline; the output is a host-neutral model description that
+// Model catalog helpers; the output is a host-neutral model description that
 // src/index.ts converts into OpenCode Model.Info records.
 
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises"

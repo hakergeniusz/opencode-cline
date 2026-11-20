@@ -17,7 +17,7 @@ import {
 
 const API_BASE_URL = "https://api.cline.bot"
 
-// The Cline API expects this client identifier; keep it identical to pi-cline.
+// Cline API client identifiers.
 const BASE_HEADERS: Record<string, string> = {
     Accept: "application/json",
     "Content-Type": "application/json",
@@ -79,7 +79,7 @@ function toModelInfo(providerName: ProviderName, model: ClineModel): ModelBase {
 export default Plugin.define({
     id: "opencode-cline",
     async setup(ctx) {
-        // Model discovery mirrors the pi extension: start with whatever we can
+        // Model discovery: start with whatever we can
         // fetch, and still register the providers if both catalogs fail.
         let clineModels: ClineModel[] = []
         let passModels: ClineModel[] = []
@@ -149,7 +149,7 @@ export default Plugin.define({
             return credentials
         }
 
-        // pi's before_provider_request hook + provider apiKey/authHeader map to
+        // Provider request hook normalizes prompt-cache payloads and applies auth.
         // an http.request hook: inject the bearer token and rewrite cache
         // markers on outgoing Cline requests.
         async function applyClineRequest(

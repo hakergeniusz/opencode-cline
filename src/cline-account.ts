@@ -1,6 +1,6 @@
 // Cline account / organization helpers.
-// Ported from pi-cline with the pi ExtensionAPI dependencies removed; the
-// interactive command now lives in src/index.ts.
+// Account/organization API helpers for the OpenCode plugin; the
+// Interactive command logic lives in src/index.ts.
 
 const API_BASE_URL = "https://api.cline.bot"
 export const PERSONAL_ACCOUNT_ID = "__personal__"

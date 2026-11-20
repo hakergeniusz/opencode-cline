@@ -13,7 +13,7 @@ describe("Cline prompt-cache normalization", () => {
         expect(normalizeClinePromptCachePayload(payload)).toBe(payload)
     })
 
-    it("normalizes pi cache markers to Cline's request format", () => {
+    it("normalizes cache markers to Cline's request format", () => {
         const payload = {
             model: "anthropic/claude-fable-5",
             messages: [

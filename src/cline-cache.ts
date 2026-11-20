@@ -1,5 +1,5 @@
 // Prompt-cache payload normalization for Cline's OpenAI-compatible endpoint.
-// Ported from pi-cline without any pi runtime dependency.
+// Prompt-cache payload normalization for Cline-compatible requests.
 
 export type JsonObject = Record<string, unknown>
 

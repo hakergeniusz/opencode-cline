@@ -1,5 +1,5 @@
 // WorkOS device-code OAuth against Cline's api.cline.bot endpoints.
-// Ported from pi-cline with pi's OAuth types replaced by small local types.
+// OAuth flow with local types for the OpenCode plugin.
 
 import {
     loadClineAccountChoices,
@@ -320,7 +320,7 @@ export async function loginCline(
         return credentials
     }
 
-    // Org-aware login: mirror the pi flow. When an interactive selector is
+    // Org-aware login: when an interactive selector is
     // available, use it; otherwise keep the account Cline currently has active.
     const choices = await loadClineAccountChoices(token, signal)
     if (choices.length <= 1) return credentials
